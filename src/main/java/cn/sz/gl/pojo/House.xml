@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.sz.gl.pojo.House" >
+
+	<select id="findDeptByUnit_" parameterType="java.lang.String" resultType="cn.sz.gl.pojo.House">
+		select houseId as house_id,unit_,buildArea as build_area,useArea as use_area,houseType as house_type,typeDesc as type_desc from house where unit_=#{unit_}
+	</select>
+</mapper>
